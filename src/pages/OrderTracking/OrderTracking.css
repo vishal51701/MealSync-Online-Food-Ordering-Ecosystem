@@ -1,0 +1,111 @@
+.order-placed-wrapper {
+  min-height: 70vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 60px 20px;
+}
+
+.order-placed-card {
+  background: var(--card-bg);
+  border-radius: 20px;
+  box-shadow: 0 16px 48px rgba(0,0,0,0.12);
+  padding: 50px 40px;
+  max-width: 480px;
+  width: 100%;
+  text-align: center;
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.order-placed-card.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.order-check-circle {
+  width: 90px;
+  height: 90px;
+  margin: 0 auto 28px;
+}
+
+.checkmark-svg { width: 100%; height: 100%; }
+
+.checkmark-circle {
+  stroke: #4caf50;
+  stroke-width: 3;
+  stroke-dasharray: 166;
+  stroke-dashoffset: 166;
+  animation: draw-circle 0.7s ease 0.2s forwards;
+}
+
+.checkmark-tick {
+  stroke: #4caf50;
+  stroke-width: 4;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke-dasharray: 48;
+  stroke-dashoffset: 48;
+  animation: draw-tick 0.4s ease 0.8s forwards;
+}
+
+@keyframes draw-circle { to { stroke-dashoffset: 0; } }
+@keyframes draw-tick   { to { stroke-dashoffset: 0; } }
+
+.order-placed-card h2 {
+  font-size: 24px;
+  font-weight: 700;
+  color: var(--text);
+  margin-bottom: 12px;
+}
+
+.order-placed-msg {
+  font-size: 15px;
+  color: var(--text-muted);
+  line-height: 1.7;
+  margin-bottom: 30px;
+}
+
+.order-placed-msg strong { color: tomato; font-weight: 600; }
+
+.order-placed-details {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-bottom: 34px;
+}
+
+.order-detail-chip {
+  background: var(--bg-secondary);
+  border: 1px solid var(--border);
+  border-radius: 50px;
+  padding: 10px 20px;
+  font-size: 14px;
+  color: var(--text);
+  animation: fadeIn 0.5s ease both;
+}
+
+.order-detail-chip:nth-child(1) { animation-delay: 1s;   }
+.order-detail-chip:nth-child(2) { animation-delay: 1.2s; }
+.order-detail-chip:nth-child(3) { animation-delay: 1.4s; }
+
+.order-back-btn {
+  background: tomato;
+  color: white;
+  border: none;
+  padding: 13px 36px;
+  border-radius: 50px;
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.3s;
+  animation: fadeIn 0.5s ease 1.6s both;
+}
+
+.order-back-btn:hover { background: #e03e1a; }
+
+@media (max-width: 500px) {
+  .order-placed-card { padding: 36px 22px; }
+  .order-placed-card h2 { font-size: 20px; }
+}

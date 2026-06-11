@@ -1,0 +1,77 @@
+.welcome-overlay {
+    position: fixed;
+    z-index: 9999;
+    inset: 0;
+    background-color: rgba(0,0,0,0.55);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    animation: overlayFadeIn 0.4s ease;
+}
+@keyframes overlayFadeIn {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+.welcome-box {
+    background: #fff;
+    border-radius: 16px;
+    padding: 40px 36px 32px;
+    max-width: 420px;
+    width: 90%;
+    text-align: center;
+    box-shadow: 0 20px 60px rgba(0,0,0,0.25);
+    animation: boxSlideUp 0.4s ease;
+}
+@keyframes boxSlideUp {
+    from { transform: translateY(40px); opacity: 0; }
+    to   { transform: translateY(0);    opacity: 1; }
+}
+.welcome-box .welcome-icon {
+    font-size: 48px;
+    margin-bottom: 14px;
+    display: block;
+}
+.welcome-box h2 {
+    font-size: 22px;
+    color: #1a1a1a;
+    margin-bottom: 10px;
+    font-weight: 700;
+}
+.welcome-box p {
+    font-size: 15px;
+    color: #666;
+    line-height: 1.6;
+    margin-bottom: 28px;
+}
+.welcome-box p span {
+    color: tomato;
+    font-weight: 600;
+}
+.welcome-buttons {
+    display: flex;
+    gap: 12px;
+    justify-content: center;
+}
+.welcome-btn-login {
+    background-color: tomato;
+    color: white;
+    border: none;
+    padding: 11px 28px;
+    border-radius: 50px;
+    font-size: 15px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+.welcome-btn-login:hover { background-color: #e03e1a; }
+.welcome-btn-skip {
+    background: transparent;
+    color: #888;
+    border: 1px solid #ccc;
+    padding: 11px 28px;
+    border-radius: 50px;
+    font-size: 15px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+.welcome-btn-skip:hover { border-color: tomato; color: tomato; }

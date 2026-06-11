@@ -1,0 +1,122 @@
+.food-item {
+  width: 100%;
+  margin: auto;
+  border-radius: 15px;
+  box-shadow: var(--card-shadow);
+  background: var(--card-bg);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  animation: fadeIn 1s;
+  overflow: hidden;
+}
+
+.food-item:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 28px rgba(0,0,0,0.15);
+}
+
+.food-item-img-container {
+  position: relative;
+  overflow: hidden;
+  border-radius: 15px 15px 0 0;
+}
+
+.food-item-image {
+  width: 100%;
+  display: block;
+  border-radius: 15px 15px 0 0;
+  transition: transform 0.4s ease;
+}
+
+.food-item:hover .food-item-image {
+  transform: scale(1.06);
+}
+
+.food-item-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.45);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: opacity 0.35s ease;
+  border-radius: 15px 15px 0 0;
+}
+
+.food-item:hover .food-item-overlay {
+  opacity: 1;
+}
+
+.buy-now-btn {
+  background: tomato;
+  color: white;
+  border: none;
+  padding: 10px 22px;
+  border-radius: 50px;
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+  transform: translateY(10px);
+  transition: transform 0.3s ease, background 0.2s ease;
+}
+
+.food-item:hover .buy-now-btn {
+  transform: translateY(0px);
+}
+
+.buy-now-btn:hover {
+  background: #e03e1a;
+}
+
+.food-item-img-container .add {
+  width: 35px;
+  position: absolute;
+  bottom: 15px;
+  right: 15px;
+  cursor: pointer;
+  border-radius: 50%;
+  z-index: 2;
+}
+
+.food-item-counter {
+  position: absolute;
+  bottom: 15px;
+  right: 15px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 6px;
+  border-radius: 50px;
+  background-color: white;
+  z-index: 2;
+}
+.food-item-counter img { width: 30px; }
+
+.food-item-info { padding: 20px; }
+
+.food-item-name-rating {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.food-item-name-rating p {
+  font-size: 20px;
+  font-weight: 500;
+  color: var(--text);
+}
+
+.food-item-name-rating img { width: 70px; }
+
+.food-item-desc {
+  color: var(--text-muted);
+  font-size: 16px;
+}
+
+.food-item-price {
+  color: tomato;
+  font-size: 22px;
+  margin: 10px 0;
+  font-weight: 500;
+}
